@@ -1,0 +1,320 @@
+// our partners
+.our-partners-grid {
+    display: grid;
+    max-width: 91.875em;
+    margin: 5.5em auto 0;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    justify-content: center;
+
+    @media #{$mobL} {
+        grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+        margin-top: 2em;
+    }
+}
+
+.our-partners__item {
+    border-right: 1px solid rgba(var(--primary-color), 0.1);
+    border-top: 1px solid rgba(var(--primary-color), 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em 2em;
+
+    &:nth-child(5n) {
+        @media #{$tab} {
+            border-right: 0;
+        }
+    }
+
+    @media #{$mob} {
+        &:nth-child(even) {
+            border-right: 0;
+        }
+    }
+
+    &:nth-child(-n + 5) {
+        @media #{$tab} {
+            border-top: 0;
+        }
+    }
+
+    @media #{$mob} {
+        &:nth-child(-n + 2) {
+            border-top: 0;
+        }
+    }
+
+    .figure {
+
+        img,
+        svg {
+            margin: 0 auto;
+            width: auto;
+            max-width: 90%;
+            max-height: 9.375em;
+        }
+    }
+}
+
+
+.h_ab_center-panel {
+    @media #{$desktop} {
+        padding-left: 3.75em;
+    }
+}
+
+// about
+.about-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    display: none;
+
+    @media #{$desktop} {
+        display: block;
+    }
+}
+
+
+// statements
+
+.statements-sec {
+    position: relative;
+    padding: 6.25em 0;
+
+    @media #{$ipadpro} {
+        padding: 2em 0;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background: url('../svg/mission-svg.svg') no-repeat;
+        top: 0;
+        left: 0;
+        background-size: cover;
+    }
+}
+
+.statements__slider-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    @media #{$ipad} {
+        align-items: center;
+        margin-top: 1em;
+    }
+}
+
+.statements__slider__one {
+    // height: 21.375em;
+    margin: 0;
+    flex: 0 1 100%;
+
+    @media #{$tabL} {
+        flex: 0 1 68%;
+        padding: 3.75em 0;
+    }
+
+    @media #{$ipadpro} {
+        // height: 27.375em;
+        padding: 0;
+    }
+
+    @media #{$ipad} {
+        flex: 0 1 60%;
+        // height: 35em;
+    }
+
+    @media #{$mobL} {
+        flex-basis: 100%;
+        // height: 37.14em;
+    }
+
+
+    .swiper-slide {
+        height: auto;
+        opacity: 0.25;
+        transition: $transition;
+        cursor: pointer;
+
+        &-thumb-active {
+            opacity: 1;
+
+            .statements__circle {
+                background-color: var(--blue3);
+
+                &::before {
+                    opacity: 0.25;
+                    background-color: var(--primary)
+                }
+            }
+        }
+
+        &:last-child {
+            .description {
+
+                padding: 0;
+                margin: 0;
+                border: none;
+
+                @media #{$ipad} {
+                    margin-top: 1em;
+                }
+            }
+
+            .statements__row {
+                margin: 0;
+
+                @media #{$ipad} {
+                    margin-top: 1em;
+                }
+
+                @media #{$mob} {
+                    margin-bottom: 1.5em;
+                }
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+
+            // .title {
+            //     transform: translateX(0.357em);
+            // }
+
+            // .statements__circle {
+            //     background-color: var(--blue3);
+            // }
+        }
+    }
+}
+
+.statements__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 6.5em;
+
+    @media #{$ipadpro} {
+        margin-bottom: 2em;
+    }
+
+    .statements__circle {
+        flex: 0 0 2em;
+        width: 2em;
+        height: 2em;
+        background: transparent;
+        transition: all 0.5s linear;
+        position: relative;
+        border-radius: 50%;
+        margin-right: 6.25em;
+
+        @media #{$ipadpro} {
+            margin-right: 2em;
+        }
+
+        @media #{$mob} {
+            margin-right: 1em;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0.75em;
+            height: 0.75em;
+            flex: 0 0 0.75em;
+            background: #8599B9;
+            // opacity: 0.25;
+            border-radius: inherit;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .title {
+        // flex: 0 0 3.66em;
+        // margin: 0 2.5em 0 0;
+        transition: $transition;
+        width: 33%;
+
+        @media #{$ipadpro} {
+            margin: 0 1em 0 0;
+        }
+
+        @media #{$ipad} {
+            width: 100%;
+        }
+    }
+
+    .description {
+        flex: 0 0 calc(100% - 44.5%);
+        border-bottom: 1px solid rgba(var(--white-color), 0.3);
+        padding: 0 0 6.5em;
+
+        @media #{$ipadpro} {
+            padding: 0 0 2em;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        @media #{$ipadpro} {
+            flex-basis: calc(100% - 20em);
+        }
+
+        @media #{$ipad} {
+            flex-basis: 100%;
+            margin-top: 1em;
+        }
+    }
+}
+
+.statements__slider__two {
+    width: 100%;
+    // height: 20em;
+
+    @media #{$ipadL} {
+        width: 32%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    @media #{$ipad} {
+        width: 33.6%;
+        height: 20em;
+        position: static;
+        margin-right: 0;
+    }
+
+    @media #{$mob} {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        @include imageHover;
+    }
+}
+
+.h_ab_figure-lg {
+    height: 48.75em;
+    @include imageHover;
+
+    @media #{$ipad} {
+        height: 25em;
+        max-width: 70%;
+        margin: 0 auto 2em;
+    }
+
+    @media #{$mobL} {
+        max-width: 100%;
+    }
+}

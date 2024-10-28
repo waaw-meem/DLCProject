@@ -1,0 +1,35 @@
+:root {
+  --primary-color: 45, 45, 45; // dark gray
+  --secondary-color: 243, 243, 243; // light gray
+  --gold-color: 204, 159, 94; // gold
+  --white-color: 255, 255, 255;
+  --black-color: 0, 0, 0;
+  --gray-color: 211,211,211; // Gray
+}
+
+
+
+// NOTE: above colors will be used with rgb() & rgba()  function
+
+// NOTE:  sample sass variable : i will not use this now.
+// $primarycolor: var(--primary-color);
+
+// font families
+$basefont: "Montserrat", sans-serif;
+$transition: all 0.5s ease;
+$transition-linear: all 0.5s linear;
+$transition-bounce: all 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+
+// Media Sizes
+// Mobile first approach
+$tab: "(min-width:576px)";
+$tabL: "(min-width:768px)";
+$ipadL: "(min-width:992px)";
+$ipadXL: "(min-width:1025px)";
+$desktop: "(min-width:1200px)";
+
+// Desktop first approach
+$ipadpro: "(max-width:1199.98px)";
+$ipad: "(max-width:991.98px)";
+$mobL: "(max-width:767.98px)";
+$mob: "(max-width:575.98px)";

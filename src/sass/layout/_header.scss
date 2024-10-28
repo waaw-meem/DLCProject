@@ -1,0 +1,193 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 12;
+  transition: $transition;
+  transition-timing-function: ease;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.25em 0;
+    transition: 0.4s;
+    position: relative;
+
+    @media #{$mobL} {
+      align-items: center;
+    }
+
+    @media #{$tab} {
+      padding: 3.0625em 0 1em;
+    }
+
+
+  }
+
+  .logo-black {
+    display: none;
+  }
+
+  &__cta {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -1em;
+    padding-right: 1em;
+    @media #{$desktop} {
+      padding-right: 0;
+    }
+    &__number {
+      display: flex;
+      color: rgb(var(--white-color));
+      img,
+      svg {
+        margin: 0 0.9375em 0 0;
+        width: 0.875em;
+        @media #{$mob} {
+          margin: 0;
+        }
+      }
+      span {
+        font-size: 1.125em;
+        transition: $transition;
+        @media #{$mob} {
+          display: none;
+        }
+      }
+    }
+    > * {
+      margin: 0 0.7em;
+      @media #{$tab} {
+        margin: 0 1em;
+      }
+    }
+  }
+
+  // &__socials {
+  //   display: flex;
+  //   align-items: center;
+  //   margin: 0 -1.8125em;
+  //   @media #{$ipadpro} {
+  //     //   padding: 0 2em;
+  //   }
+  // }
+
+  .logo-color {
+    display: none;
+  }
+}
+
+html[lang="ar"] {
+  .header__language {
+    @media #{$mob} {
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+.brand-logo {
+  position: relative;
+  width: 6.875em;
+  transition: $transition;
+  transition-timing-function: ease;
+  z-index: 1;
+
+  @media #{$ipadpro} {
+    width: 5em;
+  }
+  @media #{$mob} {
+    width: 4em;
+  }
+
+  &__anchor {
+    display: inline-block;
+    height: auto;
+  }
+}
+
+.no-home,
+.home {
+  .sticky {
+    background-color: rgba( var(--gold-color), 0.93);
+    transition: $transition;
+    box-shadow: 0 -1px 6px 0 rgba(0,0,0,0.4);
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
+
+    .header__wrapper {
+      padding: 1em 0;
+      transition: 0.4s;
+    }
+
+    .brand-logo {
+      width: 4.5em;
+      @media #{$mobL} {
+        width: 3.5em;
+      }
+    }
+    .nav-button{
+      &:before,
+      &::after {
+        background: rgb( var(--secondary-color));
+      }
+    }
+
+    .navigation-wrapper {
+      @media #{$tab} {
+        padding-top: 2.5em;
+      }
+    }
+
+
+  }
+}
+
+
+
+
+
+// .header {
+//   &--white {
+//     .menu__menuitem--menulink {
+//       color: rgb(var(--secondary-color));
+//       @media #{$ipadpro} {
+//         color: rgb(var(--white-color));
+//       }
+//     }
+
+//     .header__cta__number {
+//       color: rgb(var(--secondary-color));
+//       path {
+//         fill: rgb(var(--secondary-color));
+//       }
+//     }
+
+//     .logo-white {
+//       display: none;
+//     }
+
+//     .logo-color {
+//       display: block;
+//     }
+
+//     &.sticky {
+//       background-color: rgb(var(--black-color));
+//       box-shadow: none;
+//       .menu__menuitem--menulink {
+//         color: rgb(var(--white-color));
+//       }
+
+//       .header__cta__number {
+//         color: rgb(var(--white-color));
+//         path {
+//           fill: rgb(var(--white-color));
+//         }
+//       }
+//     }
+
+//   }
+// }

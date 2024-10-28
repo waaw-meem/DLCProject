@@ -1,0 +1,26 @@
+.text-editor {
+  ul {
+    padding-left: 1em;
+  }
+}
+
+.not-found-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content-wrapper {
+    max-width: 50.875em;
+    text-align: center;
+    p {
+      padding: 0 2em;
+    }
+    .not-found-anchor-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+  }
+}

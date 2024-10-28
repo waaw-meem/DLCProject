@@ -1,0 +1,373 @@
+.contact-address__wrapper {
+  background-color: rgba(var(--gray-color), 1);
+  padding-left: 4.375em;
+  padding-right: 8.5em;
+
+  @media #{$mobL} {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .contact-address__box:not(:first-child) {
+    .h2 {
+      margin-top: 0.5416em;
+    }
+  }
+
+  .contact-address__box {
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.contact-address__box {
+  position: relative;
+  padding: 0 0 3.125em;
+
+  @media #{$mobL} {
+    padding-bottom: 1em;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(var(--white-color), 0.15);
+    bottom: 0;
+    display: block;
+    position: absolute;
+  }
+
+  .h2 {
+    color: rgba(var(--white-color), 1);
+    margin: 0 0 1.0416em;
+
+    @media #{$tabL} {
+      font-size: 3em;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    font-size: 0.909em;
+    color: rgba(var(--white-color), 1);
+    font-weight: 700;
+    margin: 0 0 1.5em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.8em;
+
+    @media #{$mobL} {
+      margin-bottom: 1em;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    flex: 0 0 1em;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__anchors {
+    a {
+      font-size: 1em;
+      font-weight: 700;
+      color: rgba(var(--white-color), 1);
+      transition: $transition;
+
+      &:hover {
+        color: rgba(var(--primary-color), 1);
+      }
+    }
+  }
+}
+
+.contact-address__form-wrapper {
+  .custom-row {
+    margin: 0 -1.625em;
+  }
+
+  .c_form-field {
+    padding: 0 1.625em;
+  }
+
+  .contact-address__checkboxes {
+    margin: 1.875em 0 0;
+
+    > .h6 {
+      margin-bottom: 1.5em;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5625em 7.5em;
+      margin: 0 0 3.75em;
+
+      @media #{$ipadpro} {
+        gap: 1.5625em 1em;
+      }
+
+      @media #{$mobL} {
+        margin-bottom: 2em;
+      }
+
+      .form-group {
+        margin: 0;
+        flex: 0 0 calc(25% - 5.8125em);
+
+        @media (max-width: 1440px) {
+          flex-basis: 25%;
+        }
+
+        @media #{$ipadpro} {
+          flex-basis: 27%;
+        }
+
+        @media #{$mobL} {
+          flex-basis: 47%;
+        }
+      }
+    }
+  }
+}
+
+.contact-map-sec__map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//////////////////////////////// ----------------------------------------------------------  /////////////////////////////////
+
+.contact-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media #{$desktop} {
+    padding: 1.875em 4.6875em 0 4.6875em;
+  }
+}
+
+.contactSec {
+  padding-top: 4.375em;
+
+  @media #{$ipadpro} {
+    padding-top: 2em;
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+
+  @media #{$desktop} {
+    max-width: 28em;
+    min-width: 20em;
+  }
+
+  @media #{$ipadpro} {
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    width: 25%;
+  }
+
+  @media #{$ipad} {
+    width: 50%;
+  }
+
+  @media #{$mob} {
+    width: 100%;
+  }
+
+  .icon {
+    width: 6.25em;
+    height: 6.25em;
+    margin-right: 1.625em;
+    border: 1px solid rgba(var(--gold-color), 1);
+    background: rgba(var(--gold-color), 1);
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    @media #{$ipadpro} {
+      width: 3em;
+      height: 3em;
+      margin-right: 1em;
+    }
+
+    svg {
+      z-index: 5;
+
+      @media #{$ipadpro} {
+        padding: 0.5em;
+      }
+
+      path {
+        transition: $transition;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(var(--black-color), 1);
+      border-radius: 50%;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: $transition;
+    }
+  }
+
+  .content {
+    width: calc(100% - 8.25em);
+
+    @media #{$ipadpro} {
+      width: calc(100% - 4.75em);
+    }
+
+    h6 {
+      font-weight: 700;
+      color: #0c0c0c;
+
+      @media #{$ipad} {
+        margin: 0 0 0.5em 0;
+      }
+    }
+
+    a {
+      font-size: 1.125em;
+      font-weight: 400;
+      color: rgba(var(--black-color), 1);
+
+      @media #{$ipadpro} {
+        font-size: 0.85em;
+      }
+    }
+
+    .w-uline {
+      &:after {
+        background: rgba(var(--gold-color), 1);
+      }
+    }
+  }
+
+  .social-wrapper {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-left: -0.5em;  
+
+    .social {
+      margin: 0 0.25em 0 0;
+      width: 2em;
+      height: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s ease-in-out;
+      border-radius: 50%;
+
+      .img-wrapper {
+        height: 1em;
+        width: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media #{$mob} {
+          height: 1.25em;
+          width: 1.25em;
+        }
+
+        svg {
+          width: 1em;
+          height: 1em;
+          padding: 0.1em;
+          @media #{$mobL} {
+            width: 1.4em;
+            height: 1.4em;
+          }
+
+          path {
+            fill: rgba(var(--black-color), 1);
+          }
+        }
+      }
+
+      &:hover {
+        background: rgba(var(--gold-color), 1);
+        transition: 0.5s ease-in-out;
+
+        .img-wrapper {
+          svg {
+            path {
+              fill: rgba(var(--white-color), 1);
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-sec {
+  background: rgb(var(--secondary-color));
+
+  .img-wrapper {
+    height: 100%;
+    iframe,
+    img {
+      height: 100%;
+    }
+  }
+
+  .contactFormWrapper {
+    margin: 5em 0 5em 0;
+    @media #{$mobL} {
+      margin: 2em 0 2em 0;
+    }
+
+    p {
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}

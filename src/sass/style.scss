@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@import "./abstract/fonts";
+@import "./abstract/variable";
+@import "./abstract/functions";
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/theme";
+@import "./base/data-loader";
+@import "./abstract/mixins";
+
+
+
+// utitlities 
+@import "./base/general";
+@import "./abstract/colors";
+@import "./abstract/animate";
+@import "./layout/grid";
+@import "./abstract/utilities";
+@import "./abstract/extra";
+
+
+//  components 
+@import "./components/button";
+@import "./components/form-field";
+@import "./components/cards";
+@import "./components/tabs";
+@import "./components/accordions";
+@import "./components/select";
+@import "./components/news-letter";
+@import "./components/modal";
+@import "./components/properties";
+@import "./components/swiper-icons";
+
+
+// layouts
+@import "./layout/navigation";
+@import "./layout/inner-hero";
+@import "./layout/header";
+@import "./layout/footer";
+
+
+
+// page
+@import "./pages/contact";
+@import "./pages/properties-detail";
+@import "./pages/aboutUs";
+@import "./pages/mortgage-calculator";
+
+
+
+
+

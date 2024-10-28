@@ -1,0 +1,153 @@
+.modal {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  z-index: 1051;
+  max-width: 50em;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  display: none;
+  box-shadow: -22px 0px 27px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: $transition;
+  background-color: rgb(var(--white-color));
+
+  @media #{$mobL} {
+    max-width: 24em;
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &__dialog {
+    display: flex;
+    align-items: center;
+    height: 45.125em;
+    overflow-y: auto;
+  }
+
+  &__content {
+    padding: 2.5em 2.5em 2.5em;
+    background-color: rgb(var(--white-color));
+    position: relative;
+
+    @media #{$ipadpro} {
+      padding: 2em 2.5em 3em;
+    }
+  }
+
+  &__cancel {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 2.85em;
+    top: 3.75em;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 1.714em;
+    height: 1.714em;
+    transition: $transition;
+
+    @media #{$mobL} {
+      right: 1.85em;
+      top: 1.285em;
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+
+    img,
+    svg {
+      pointer-events: none;
+    }
+  }
+
+  &__body {
+    .choices__list--dropdown,
+    .choices__list[aria-expanded] {
+      overflow-y: scroll;
+      height: 100px;
+    }
+  }
+
+  .heading-bar {
+    pointer-events: none;
+  }
+
+  &--properties-detail {
+    max-width: 35em;
+    transform: translateY(0);
+    top: 130%;
+    display: block;
+
+    @media #{$ipadpro} {
+      max-width: 33em;
+    }
+
+    @media #{$mobL} {
+      max-width: 24em;
+    }
+
+    .p {
+      font-size: 1.125em;
+    }
+
+    .modal__cancel {
+      width: 2em;
+      height: 2em;
+      top: 1.5em;
+      right: 1.5em;
+      @media #{$mobL} {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+
+    .generic-panel {
+      padding: 0;
+      max-width: 89%;
+      margin-bottom: 0.8em;
+      .h3 {
+        margin-bottom: 0.3em;
+      }
+    }
+
+    .modal__content {
+      padding: 3.25em 2.6875em 3.25em 2.4375em;
+      height: 100%;
+    }
+
+    &.show {
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(var(--black-color), 0.7);
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  &--properties-detail {
+    &.show {
+      display: block;
+    }
+  }
+}
